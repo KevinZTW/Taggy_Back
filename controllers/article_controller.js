@@ -13,7 +13,7 @@ const getArticle = function (url) {
       var doc = new JSDOM(response.data, {
         url: url,
       });
-
+      let docTitle = doc.window.document.head.title.textContent;
       let reader = new Readability(doc.window.document);
       let article = reader.parse();
       console.log(article.title);
@@ -34,7 +34,5 @@ const getArticle = function (url) {
       console.log(error);
     });
 };
-getArticle(
-  "https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters#:~:text=%E5%9C%A8%20JavaScript%20%E4%B8%AD%EF%BC%8C%E5%87%BD%E5%BC%8F,%E8%A8%AD%E5%80%BC%E9%83%BD%E7%82%BA%20undefined%20%E3%80%82"
-);
+
 export { getArticle };
