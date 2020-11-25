@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@mozilla/readability": "^0.3.0",
     "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -11,6 +12,7 @@
     "firebase": "^8.1.1",
     "jsdom": "^16.4.0",
     "node-readability": "^3.0.0",
+    "nodemon": "^2.0.6",
     "request": "^2.88.2",
     "turndown": "^7.0.0"
   },

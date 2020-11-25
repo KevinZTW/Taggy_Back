@@ -1,23 +1,13 @@
-var read = require("node-readability");
-var fs = require("fs");
-read("https://github.com/luin/readability", function (err, article, meta) {
-  // Main Article
+var express = require("express");
+var app = express();
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+var cors = require("cors");
+app.use(cors());
 
-  // Title
+app.use("/route", [require("./routes/article_route")]);
 
-  // HTML Source Code
-
-  if (article.content) {
-    fs.writeFile("read.html", article.content, function (err) {
-      if (err) {
-        return console.log(err);
-      }
-    });
-  }
-  // DOM
-
-  // Response Object from Request Lib
-
-  // Close article to clean up jsdom and prevent leaks
-  article.close();
+app.listen(2000, () => {
+  console.log("port run on 2000");
 });
