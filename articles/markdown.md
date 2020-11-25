@@ -1,33 +1,23 @@
-![圖左為聲寶總經理許經朝，右為集團總裁陳盛沺。(鉅亨網記者沈筱禎攝)](https://cimg.cnyes.cool/prod/news/4545249/l/f2f49eda9bec3da33473c59b59e2ea45.jpg)
+這就是相機及搭載的 305mm f/5 鏡頭，整體長度達 2 尺，非常巨型
 
-圖左為聲寶總經理許經朝，右為集團總裁陳盛沺。(鉅亨網記者沈筱禎攝)
+![](https://photoblog.hk/wp-content/uploads/2020/11/wwiiaerialcamera.jpg)
 
-###### Tag
+現在的航拍機愈出愈輕巧，要在高空取景變得輕鬆，但在二戰時期如果要在空中進行拍攝，除了需要拍攝者身處飛行載具，使用的器材絕對沒有現在的方便，其中一部航空攝影專用相機 [Fairchild K-17](https://web.archive.org/web/20140701230048/http://mysite.verizon.net/yenrav/20cms/cameras.htm)，機連鏡可重達 75 磅，難為了當時飛行員要用它來進行爆炸損毀記錄、測繪、偵察等工作。
 
-[聲寶](https://news.cnyes.com/tag/%E8%81%B2%E5%AF%B6)[新品](https://news.cnyes.com/tag/%E6%96%B0%E5%93%81)[家電](https://news.cnyes.com/tag/%E5%AE%B6%E9%9B%BB)
+專為美國空軍而製的 Fairchild K-17 航空攝影相機，由 [Fairchild Camera and Instrument](https://en.wikipedia.org/wiki/Fairchild_Camera_and_Instrument) 於 1940 年代初設計及製造，具有機身、用於 9.5 寸寬 Eastman Aerial Safety 菲林的可拆卸菲林匣、鏡筒三個主要組成部分。當配合分別提供 f / 6.3、f / 5 和 f / 6 光圈的 6 寸、12 寸、24 寸鏡頭使用時，可拍攝 22.86 × 22.86 厘米的照片。
 
-家電大廠聲寶 ([1604-TW](https://invest.cnyes.com/twstock/tws/1604)) 今 (25) 日舉行 2021 年新品發表會，集團總裁陳盛沺表示，今年疫情衝擊外銷業績表現，不過內銷市場空調、冰箱銷售強勁，補足外銷市場缺口，法人看好，今年全年每股純益上看 4.8 元，明年續拚成長。
+單單是相機及 A-5 菲林匣，重量就已經達 30 磅，再安裝上 12 寸鏡頭與 200 尺菲林卷，重量則提升至 55 磅，如果是配合 24 寸鏡頭使用，重量更大增至 75 磅。在如此重量下，要手持相機拍攝並非易事，使用器材時拍攝者通常會先把相機放到底座上，再配合手柄與取景器達到手動控制。
 
-陳盛沺也宣布，今年受到疫情影響取消尾牙，由各部門自行舉辦，並鼓勵抽獎活動改為線上舉行，另外，今年年終將優於去年的 2 個月。
+K-17、12″ 鏡筒及 A-5／A-5A 菲林匣
 
-聲寶今年受到疫情影響，外銷比重從 15% 下滑至不到 10%，不過內銷市場需求強勁，包括無颱風帶動冷氣全年業績年增 15%，冰箱更是供不應求。
+![](https://photoblog.hk/wp-content/uploads/2020/11/k14.jpg)
 
-陳盛沺看好，內需市場銷售量不俗，尤其 9 成屬於台灣製家電，加上消費者對品牌信心回流，以及今年新品陸續上市，本季本業有望挑戰近 5 年單季新高，法人估，內銷全年業績年增 12-15%，支撐全年營收年增 1 成以上。
+這部相機常被誤認為 [Kodak K-24](http://camera-wiki.org/wiki/Kodak_K-24)，現在有沒有加深了對它的認識呢？幸好現在航拍不用使用這麼難「上手」的攝影器材。
 
-聲寶今日首度移師台南新廠舉行 2021 年新品發表會，推出多冰箱、洗衣機、空調、空氣清淨機等新品，其中，聲寶藉由生產空調壓縮機經驗，推出專屬寵物空調，結合微型空調與模組化床體，新品預計明年初上市，首波將先推出 3000 台，目標年銷售量上看 1 萬台。
+延伸閱讀︰
 
-聲寶也獨家引進日本 KALTECH 空氣清淨機，可去除新冠病毒，該產品已大量導入日本防疫旅館，陳盛沺看好，空氣清淨機預計年底前開賣，銷售量同樣不俗。
+[DJI 推出第二代 249g 航拍機 Mavic Mini 2，可拍攝 4K 影片、圖傳範圍 10 公里、31 分鐘續航](https://photoblog.hk/276748/dji-%e6%8e%a8%e5%87%ba%e7%ac%ac%e4%ba%8c%e4%bb%a3-249g-%e8%88%aa%e6%8b%8d%e6%a9%9f-mavic-mini-2%ef%bc%8c%e5%8f%af%e6%8b%8d%e6%94%9d-4k-%e5%bd%b1%e7%89%87%e3%80%81%e5%9c%96%e5%82%b3%e7%af%84%e5%9c%8d-1/)
 
-* * *
+[第一屆航拍攝影大賽 Aerial Photography Awards 得獎作品精選](https://photoblog.hk/275623/%e7%ac%ac%e4%b8%80%e5%b1%86%e8%88%aa%e6%8b%8d%e6%94%9d%e5%bd%b1%e5%a4%a7%e8%b3%bd-aerial-photography-awards-%e5%be%97%e7%8d%8e%e4%bd%9c%e5%93%81%e7%b2%be%e9%81%b8/)
 
-相關個股
-----
-
-[聲寶1604](https://invest.cnyes.com/twstock/TWS/1604)
-
-延伸閱讀
-----
-
-*   [聲寶處分桃園龜山土地及倉庫 貢獻EPS 3.4元](https://news.cnyes.com/news/id/4506354?exp=a "聲寶處分桃園龜山土地及倉庫 貢獻EPS 3.4元")
-*   [氣溫高冷氣銷售旺 家電本業全年挑戰每股賺1元](https://news.cnyes.com/news/id/4520129?exp=a "氣溫高冷氣銷售旺 家電本業全年挑戰每股賺1元")
-*   [活化資產出售龜山倉庫 全年獲利將優於去年](https://news.cnyes.com/news/id/4520148?exp=a "活化資產出售龜山倉庫 全年獲利將優於去年")
+Source：[Petapixel](https://petapixel.com/2020/11/17/this-camera-used-for-aerial-photos-during-wwii/)、[Verizon](https://web.archive.org/web/20140701230048/http://mysite.verizon.net/yenrav/20cms/cameras.htm)
