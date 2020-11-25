@@ -9,5 +9,4 @@ const firebaseConfig = {
   measurementId: "G-RBNFGWQ2WE",
 };
 
-const s = "12312";
-module.exports = { firebaseConfig, s };
+export { firebaseConfig };
