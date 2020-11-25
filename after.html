@@ -1,0 +1,109 @@
+<div id="readability-page-1" class="page"><div id="readme">
+    
+        
+
+      <div>
+        <article itemprop="text">
+<p>Turn any web page into a clean view. This module is based on arc90's readability project.</p>
+<p><a href="https://travis-ci.org/luin/readability" rel="nofollow"><img src="https://camo.githubusercontent.com/2e3f4e733abb07e977a804d27dbee87e68b307ec67f980bbca3dfbcbf0ad62de/68747470733a2f2f7472617669732d63692e6f72672f6c75696e2f726561646162696c6974792e706e673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/luin/readability.png?branch=master"></a></p>
+<h2>Features</h2>
+<ol>
+<li>Optimized for more websites.</li>
+<li>Supporting HTML5 tags (<code>article</code>, <code>section</code>) and Microdata API.</li>
+<li>Focusing on both accuracy and performance. 4x times faster than arc90's version.</li>
+<li>Supporting encodings such as GBK and GB2312.</li>
+<li>Converting relative urls to absolute for images and links automatically (Thank <a href="https://github.com/gbaygon">Guillermo Baigorria</a> &amp; <a href="https://github.com/tomsutton1984">Tom Sutton</a>).</li>
+</ol>
+<h2>Example</h2>
+<p><a href="https://raw.githubusercontent.com/luin/node-readability/master/examples/before.png" rel="nofollow">Before</a> -&gt; <a href="https://raw.githubusercontent.com/luin/node-readability/master/examples/after.png" rel="nofollow">After</a></p>
+<h2>Install</h2>
+<pre><code>$ npm install node-readability
+</code></pre>
+<p>Note that from v2.0.0, this module only works with Node.js &gt;= 2.0. In the meantime you are still welcome to install a release in the 1.x series (by <code>npm install node-readability@1</code>) if you use an older Node.js version.</p>
+<h2>Usage</h2>
+<p><code>read(html [, options], callback)</code></p>
+<p>Where</p>
+<ul>
+<li><strong>html</strong> url or html code.</li>
+<li><strong>options</strong> is an optional options object</li>
+<li><strong>callback</strong> is the callback to run - <code>callback(error, article, meta)</code></li>
+</ul>
+<p>Example</p>
+<div><pre><span>var</span> <span>read</span> <span>=</span> <span>require</span><span>(</span><span>'node-readability'</span><span>)</span><span>;</span>
+
+<span>read</span><span>(</span><span>'http://howtonode.org/really-simple-file-uploads'</span><span>,</span> <span>function</span><span>(</span><span>err</span><span>,</span> <span>article</span><span>,</span> <span>meta</span><span>)</span> <span>{</span>
+  <span>// Main Article</span>
+  <span>console</span><span>.</span><span>log</span><span>(</span><span>article</span><span>.</span><span>content</span><span>)</span><span>;</span>
+  <span>// Title</span>
+  <span>console</span><span>.</span><span>log</span><span>(</span><span>article</span><span>.</span><span>title</span><span>)</span><span>;</span>
+
+  <span>// HTML Source Code</span>
+  <span>console</span><span>.</span><span>log</span><span>(</span><span>article</span><span>.</span><span>html</span><span>)</span><span>;</span>
+  <span>// DOM</span>
+  <span>console</span><span>.</span><span>log</span><span>(</span><span>article</span><span>.</span><span>document</span><span>)</span><span>;</span>
+
+  <span>// Response Object from Request Lib</span>
+  <span>console</span><span>.</span><span>log</span><span>(</span><span>meta</span><span>)</span><span>;</span>
+
+  <span>// Close article to clean up jsdom and prevent leaks</span>
+  <span>article</span><span>.</span><span>close</span><span>(</span><span>)</span><span>;</span>
+<span>}</span><span>)</span><span>;</span></pre></div>
+<p><strong>NB</strong> If the page has been marked with charset other than utf-8, it will be converted automatically. Charsets such as GBK, GB2312 is also supported.</p>
+<h2>Options</h2>
+<p>node-readability will pass the options to <a href="https://github.com/mikeal/request">request</a> directly.
+See request lib to view all available options.</p>
+<p>node-readability has two additional options:</p>
+<ul>
+<li><code>cleanRulers</code> which allow set your own validation rule for tags.</li>
+</ul>
+<p>If true rule is valid, otherwise no.
+options.cleanRulers = [callback(obj, tagName)]</p>
+<div><pre><span>read</span><span>(</span><span>url</span><span>,</span> <span>{</span>
+  <span>cleanRulers</span>: <span>[</span>
+    <span>function</span><span>(</span><span>obj</span><span>,</span> <span>tag</span><span>)</span> <span>{</span>
+      <span>if</span><span>(</span><span>tag</span> <span>===</span> <span>'object'</span><span>)</span> <span>{</span>
+        <span>if</span><span>(</span><span>obj</span><span>.</span><span>getAttribute</span><span>(</span><span>'class'</span><span>)</span> <span>===</span> <span>'BrightcoveExperience'</span><span>)</span> <span>{</span>
+          <span>return</span> <span>true</span><span>;</span>
+        <span>}</span>
+      <span>}</span>
+    <span>}</span>
+  <span>]</span><span>}</span><span>,</span> <span>function</span><span>(</span><span>err</span><span>,</span> <span>article</span><span>,</span> <span>response</span><span>)</span> <span>{</span>
+    <span>//...</span>
+  <span>}</span><span>)</span><span>;</span></pre></div>
+<ul>
+<li><code>preprocess</code> which should be a function to check or modify downloaded source before passing it to readability.</li>
+</ul>
+<p>options.preprocess = callback(source, response, contentType, callback);</p>
+<div><pre><span>read</span><span>(</span><span>url</span><span>,</span> <span>{</span>
+    <span>preprocess</span>: <span>function</span><span>(</span><span>source</span><span>,</span> <span>response</span><span>,</span> <span>contentType</span><span>,</span> <span>callback</span><span>)</span> <span>{</span>
+      <span>if</span> <span>(</span><span>source</span><span>.</span><span>length</span> <span>&gt;</span> <span>maxBodySize</span><span>)</span> <span>{</span>
+        <span>return</span> <span>callback</span><span>(</span><span>new</span> <span>Error</span><span>(</span><span>'too big'</span><span>)</span><span>)</span><span>;</span>
+      <span>}</span>
+      <span>callback</span><span>(</span><span>null</span><span>,</span> <span>source</span><span>)</span><span>;</span>
+    <span>}</span>
+  <span>}</span><span>,</span> <span>function</span><span>(</span><span>err</span><span>,</span> <span>article</span><span>,</span> <span>response</span><span>)</span> <span>{</span>
+    <span>//...</span>
+  <span>}</span><span>)</span><span>;</span></pre></div>
+<h2>article object</h2>
+<h3>content</h3>
+<p>The article content of the web page. Return <code>false</code> if failed.</p>
+<h3>title</h3>
+<p>The article title of the web page. It's may not same to the text in the <code>&lt;title&gt;</code> tag.</p>
+<h3>textBody</h3>
+<p>A string containing all the text found on the page</p>
+<h3>html</h3>
+<p>The original html of the web page.</p>
+<h3>document</h3>
+<p>The document of the web page generated by jsdom. You can use it to access the DOM directly (for example, <code>article.document.getElementById('main')</code>).</p>
+<h2>meta object</h2>
+<p>Response object from request lib. If you need to get current url after all redirect or get some headers it can be useful.</p>
+<h2>Why not Cheerio</h2>
+<p>This lib is using jsdom to parse HTML instead of cheerio because some data such as image size and element visibility isn't able to acquire when using cheerio, which will significantly affect the result.</p>
+<h2>Contributors</h2>
+<p><a href="https://github.com/luin/node-readability/graphs/contributors">https://github.com/luin/node-readability/graphs/contributors</a></p>
+<h2>License</h2>
+<p>This code is under the Apache License 2.0.  <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge" rel="nofollow"><img src="https://camo.githubusercontent.com/cc179e317353dbaea1cd1c01a7a9bf0b221176ac23fbc57b578e11264617b95f/68747470733a2f2f64327765637a68766c38323376302e636c6f756466726f6e742e6e65742f6c75696e2f6e6f64652d726561646162696c6974792f7472656e642e706e67" alt="Bitdeli Badge" data-canonical-src="https://d2weczhvl823v0.cloudfront.net/luin/node-readability/trend.png"></a></p>
+</article>
+      </div>
+  </div></div>
