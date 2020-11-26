@@ -9,6 +9,9 @@ const addArticle = function (title = "More Article", content = "No Content") {
     })
     .then(function (docRef) {
       console.log("Document written with ID: ", docRef.id);
+      docRef.update({ id: docRef.id });
+
+      db.collection("Articles");
     })
     .catch(function (error) {
       console.error("Error adding document: ", error);
